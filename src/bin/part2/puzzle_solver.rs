@@ -38,3 +38,14 @@ impl From::<PuzzleInput> for PuzzleSolver {
         Self { lefts, rights_freq }
     }
 }
+
+impl PuzzleSolver {
+    pub fn similarity(&self) -> i32 {
+        let mut sum = 0;
+        for item in &self.lefts {
+            sum += item * self.rights_freq[*item as usize];
+        }
+
+        sum
+    }
+}

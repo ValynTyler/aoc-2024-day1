@@ -6,11 +6,14 @@ mod puzzle_solver;
 fn main() {
     println!("solving part 2...");
 
-    let input_string = include_str!("../../../input/example.txt");
+    let input_string = include_str!("../../../input/numbers.txt");
 
     let input = PuzzleInput::from(input_string);
     println!("{}", input);
 
     let solver = PuzzleSolver::from(input);
     println!("{}", solver);
+
+    let similarity = solver.similarity();
+    println!("{}", similarity);
 }
