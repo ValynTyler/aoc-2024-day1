@@ -40,3 +40,17 @@ impl From::<&str> for PuzzleInput {
         )
     }
 }
+
+impl PuzzleInput {
+    pub fn split(self) -> (Vec<i32>, Vec<i32>) {
+        let mut stuff = self;
+        let mut output = (vec![], vec![]);
+
+        for item in stuff.0.drain(..) {
+            output.0.push(item.left);
+            output.1.push(item.right);
+        }
+            
+        output
+    }
+}
