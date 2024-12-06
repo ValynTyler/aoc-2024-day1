@@ -1,4 +1,4 @@
-use aoc_2024_day1::puzzle_input::PuzzleInput;
+use aoc_2024_day1::{pair::Pair, puzzle_input::PuzzleInput};
 
 fn main() {
     println!("solving part 1...");

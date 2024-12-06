@@ -1,9 +1,6 @@
 use std::fmt::Display;
 
-pub struct Pair {
-    left: i32,
-    right: i32,
-}
+use crate::pair::Pair;
 
 pub struct PuzzleInput(Vec<Pair>);
 
