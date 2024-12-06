@@ -32,3 +32,14 @@ impl From::<PuzzleInput> for PuzzleSolver {
         Self(output)
     }
 }
+
+impl PuzzleSolver {
+    pub fn total_diff(&self) -> i32 {
+        let mut sum = 0;
+        for pair in &self.0 {
+            sum += pair.diff()
+        }
+
+        sum
+    }
+}
