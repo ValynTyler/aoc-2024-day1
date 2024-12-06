@@ -1,6 +1,6 @@
-struct Pair {
+pub struct Pair {
     left: i32,
     right: i32,
 }
 
-struct PuzzleInput(Vec<Pair>);
+pub struct PuzzleInput(Vec<Pair>);
