@@ -10,4 +10,10 @@ fn main() {
 
     let split = input.split();
     println!("{:?}", split);
+
+    let mut lefts = split.0;
+    let mut rights = split.1;
+    lefts.sort();
+    rights.sort();
+    println!("{:?} ___ {:?}", lefts, rights);
 }
