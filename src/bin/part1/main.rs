@@ -1,4 +1,7 @@
 use aoc_2024_day1::puzzle_input::PuzzleInput;
+use puzzle_solver::PuzzleSolver;
+
+mod puzzle_solver;
 
 fn main() {
     println!("solving part 1...");
@@ -8,12 +11,6 @@ fn main() {
     let input = PuzzleInput::from(input_string);
     println!("{}", input);
 
-    let split = input.split();
-    println!("{:?}", split);
-
-    let mut lefts = split.0;
-    let mut rights = split.1;
-    lefts.sort();
-    rights.sort();
-    println!("{:?} ___ {:?}", lefts, rights);
+    let solver = PuzzleSolver::from(input);
+    println!("{}", solver);
 }
