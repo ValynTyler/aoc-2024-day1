@@ -1,5 +1,3 @@
-use std::{fs::File, io::BufReader};
-
 use aoc_2024_day1::puzzle_input::PuzzleInput;
 
 fn main() -> std::io::Result<()> {
